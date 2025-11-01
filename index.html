@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта Памяти: Хроники Великой Отечественной</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Oranienbaum&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Карта Памяти: Хроники Великой Отечественной</h1>
+        <p class="subtitle">Сохраним правду о подвиге нашего народа</p>
+    </header>
+
+
+    <nav>
+        <div class="nav-container">
+            <button class="nav-btn active" data-section="map-section">Карта сражений</button>
+            <button class="nav-btn" data-section="timeline-section">Лента времени</button>
+            <button class="nav-btn" data-section="quiz-section">Викторина</button>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+
+        <!-- Секция карты -->
+        <section id="map-section" class="section active">
+
+
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+
+
+            <h2>Города-герои и ключевые сражения</h2>
+            <div class="city-list" id="city-list">
+                <!-- Города будут добавлены через JavaScript -->
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- Секция ленты времени -->
+        <section id="timeline-section" class="section">
+            <h2>Хронология Великой Отечественной войны</h2>
+            <div class="timeline" id="timeline">
+                <!-- События будут добавлены через JavaScript -->
+            </div>
+        </section>
+
+
+
+
+        <!-- Секция викторины -->
+        <section id="quiz-section" class="section">
+
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Проверьте свои знания</h2>
+                    <p>Ответьте на вопросы о Великой Отечественной войне</p>
+                </div>
+
+
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="quiz-progress"></div>
+                </div>
+
+
+                <div class="question-container" id="question-container">
+                    <!-- Вопросы будут добавлены через JavaScript -->
+                </div>
+
+
+                <div class="quiz-controls">
+                    <button class="quiz-btn" id="prev-btn" disabled>Назад</button>
+                    <button class="quiz-btn" id="next-btn">Далее</button>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Всплывающее окно(Попап) с информацией о городе -->
+    <div class="popup-overlay" id="city-popup">
+        <div class="popup-content">
+
+
+            <div class="popup-header">
+                <h2 class="popup-title" id="popup-title">Название города</h2>
+                <button class="popup-close" id="popup-close">&times;</button>
+            </div>
+
+
+            <div class="popup-body">
+
+
+                <div class="popup-tabs">
+                    <button class="popup-tab active" data-tab="overview">Обзор</button>
+                    <button class="popup-tab" data-tab="heroes">Герои</button>
+                    <button class="popup-tab" data-tab="timeline">Хронология</button>
+                    <button class="popup-tab" data-tab="stats">Статистика</button>
+                    <button class="popup-tab" data-tab="gallery">Галерея</button>
+                </div>
+
+
+
+                <div class="popup-tab-content active" id="overview-tab">
+                    <p id="overview-content">Описание сражения...</p>
+                </div>
+
+
+
+                <div class="popup-tab-content" id="heroes-tab">
+                    <div class="heroes-grid" id="heroes-content">
+                        <!-- Герои будут добавлены через JavaScript -->
+                    </div>
+                </div>
+
+
+
+                <div class="popup-tab-content" id="timeline-tab">
+                    <div id="city-timeline">
+                        <!-- Хронология города будет добавлена через JavaScript -->
+                    </div>
+                </div>
+
+
+
+                <div class="popup-tab-content" id="stats-tab">
+                    <div class="stats-grid" id="stats-content">
+                        <!-- Статистика будет добавлена через JavaScript -->
+                    </div>
+                </div>
+
+
+
+                <div class="popup-tab-content" id="gallery-tab">
+                    <div class="gallery-grid" id="gallery-content">
+                        <!-- Галерея будет добавлена через JavaScript -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Карта Памяти: Хроники Великой Отечественной</p>
+        <p>Сайт создан Кораблиновым Никитой</p>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+</body>
+
+</html>
