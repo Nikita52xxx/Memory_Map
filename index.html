@@ -24,6 +24,7 @@
         <div class="nav-container">
             <button class="nav-btn active" data-section="map-section">Карта сражений</button>
             <button class="nav-btn" data-section="timeline-section">Лента времени</button>
+            <button class="nav-btn" data-section="analytics-section">Сравнение сражений</button>
             <button class="nav-btn" data-section="quiz-section">Викторина</button>
         </div>
     </nav>
@@ -51,7 +52,6 @@
 
 
 
-
         <!-- Секция ленты времени -->
         <section id="timeline-section" class="section">
             <h2>Хронология Великой Отечественной войны</h2>
@@ -60,6 +60,41 @@
             </div>
         </section>
 
+
+
+        <!-- Сравнительная аналитика между сражениями -->
+        <section id="analytics-section" class="section">
+            <h2>Сравнительная аналитика сражений</h2>
+
+            <div class="analytics-controls">
+                <div class="comparison-selectors">
+
+                    <div class="selector-group">
+                        <label for="battle1">Первое сражение:</label>
+                        <select id="battle1" class="battle-select">
+                            <option value="">Выберите сражение</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-group">
+                        <label for="battle2">Второе сражение:</label>
+                        <select id="battle2" class="battle-select">
+                            <option value="">Выберите сражение</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button id="compare-btn" class="compare-btn">Сравнить</button>
+            </div>
+
+            <div id="comparison-results" class="comparison-results">
+                <div class="comparison-placeholder">
+                    <p>Выберите два сражения для сравнения</p>
+                </div>
+            </div>
+
+        </section>
 
 
 
@@ -91,7 +126,12 @@
 
             </div>
         </section>
+
+
+
     </div>
+
+
 
     <!-- Всплывающее окно(Попап) с информацией о городе -->
     <div class="popup-overlay" id="city-popup">
